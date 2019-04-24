@@ -1,0 +1,10 @@
+###jdk动态代理  
+aspect  
+jdk  
+————————————  
+###代理类实现AOP  
+factorybean  
+———————————— 
+###AspectJ基于XML实现  
+aspectxml  
+———————————— 

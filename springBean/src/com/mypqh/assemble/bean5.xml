@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--使用构造注入装配-->
+    <bean id="user1" class="com.mypqh.assemble.User">
+        <!--constructor-arg定义参数 index从0开始索引-->
+        <constructor-arg index="0" value="tom"/>
+        <constructor-arg index="1" value="123456"/>
+        <constructor-arg index="2">
+            <list>
+                <value>"constructorvalue1"</value>
+                <value>"constructorvalue2"</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!--setter方法注入-->
+    <bean id="user2" class="com.mypqh.assemble.User">
+        <property name="username" value="张三"></property>
+        <property name="password" value="654321"></property>
+        <property name="list">
+            <list>
+                <value>"seetervalue1"</value>
+                <value>"seetervalue2"</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
